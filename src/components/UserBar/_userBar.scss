@@ -1,0 +1,99 @@
+.userBar {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+
+  &_fantasy {
+    height: 200px;
+    color: orange;
+    font-size: 18px;
+    padding: 0 110px;
+
+    &::after {
+      background: url(../img/userBarAngle.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: inherit;
+      width: 240px;
+      content: '';
+      z-index: 7;
+    }
+  
+    &::before {
+      background: url(../img/userBarBorder.png);
+      background-size: contain;
+      position: absolute;
+      top: 0;
+      left: 240px;
+      height: inherit;
+      width: calc(100% - 240px);
+      content: '';
+    }
+  }
+
+  &_light {
+    background-color: #5B88BD;
+    color: white;
+    font-size: 18px;
+    height: 80px;
+  }
+
+  &__list {
+    width: 100%;
+    height: calc(200px / 5 * 2);
+    position: relative;
+    z-index: 8;
+    font-weight: 800;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    position: relative;
+    margin-top: -25px;
+  }
+}
+
+@media screen and(max-width: 550px) {
+  .userBar {
+    &_fantasy {
+      padding-left: 110px;
+      padding-right: 10px;
+    }
+  }
+}
+
+@media screen and(max-width: 460px) {
+  .userBar {
+
+    &_fantasy {
+      padding-left: 18vw;
+    }
+  }
+}
+
+@media screen and(max-width: 420px) {
+  .userBar {
+
+  &_fantasy {
+      padding-left: 2vw;
+      padding-right: 2vw;
+  
+      &::after {
+        display: none;
+      }
+    
+      &::before {
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+}

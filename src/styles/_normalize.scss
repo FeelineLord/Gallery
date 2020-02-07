@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  overflow-x: hidden;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.fantasy {
+  background-color: #2D3377;
+}
+
+.ligh {
+  background-color: white;
+}
+
+.fantasyToLight {
+  background: white;
+  animation-name: fantasyToLight;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+}
+
+.lightToFantasy {
+  background: #2D3377;
+  animation-name: lightToFantasy;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+}
